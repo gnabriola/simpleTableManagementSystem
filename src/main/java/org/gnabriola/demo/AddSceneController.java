@@ -7,7 +7,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
 
 public class AddSceneController {
 
@@ -16,7 +19,11 @@ public class AddSceneController {
     private Parent root;
 
     @FXML
-    private Button backButton;
+    private Button backButton, saveButton;
+    @FXML
+    private TextField idTextField, nameTextField, gradesTextField;
+
+    String id, name, grades;
 
     public void backToMainScene(ActionEvent event) throws Exception {
         root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
@@ -24,6 +31,14 @@ public class AddSceneController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void addMember() throws SQLException {
+        id = idTextField.getText();
+        name = nameTextField.getText();
+        grades = gradesTextField.getText();
+        SQLController sqlController = new SQLController();
+        sqlController.save(id, name, grades);
     }
 
 }

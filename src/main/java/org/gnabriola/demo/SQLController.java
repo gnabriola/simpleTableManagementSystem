@@ -1,4 +1,5 @@
 package org.gnabriola.demo;
+import org.postgresql.util.OSUtil;
 import org.postgresql.util.PSQLException;
 
 import java.sql.*;
@@ -44,6 +45,19 @@ public class SQLController {
             ResultSet rs = st.executeQuery(sql);
         } catch (PSQLException exc) {
             System.out.println(exc);
+        }
+    }
+
+    public void save(String id, String name, String grades) throws SQLException {
+
+        String sql = "INSERT INTO students_table VALUES(" + id + ", '" + name + "', " + grades + ");";
+        Connection con = DriverManager.getConnection(url, uname, pass);
+        System.out.println("Connection established");
+        Statement st = con.createStatement();
+        try {
+            ResultSet rs = st.executeQuery(sql);
+        } catch (PSQLException e) {
+            System.out.println("lol");
         }
     }
 
