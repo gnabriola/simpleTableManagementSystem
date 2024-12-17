@@ -34,9 +34,6 @@ public class SeeAllSceneController implements Initializable {
     @FXML
     private ListView<String> membersListView;
 
-    URL url;
-    ResourceBundle resourceBundle;
-
     private SQLController sqlController;
 
     ObservableList<String> members;
@@ -62,9 +59,6 @@ public class SeeAllSceneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        this.url = url;
-        this.resourceBundle = resourceBundle;
-
         try {
             setSqlController();
         } catch (SQLException e) {
@@ -81,10 +75,5 @@ public class SeeAllSceneController implements Initializable {
             }
         });
 
-    }
-
-    public void refresh() {
-        members.clear();
-        //initialize(url, resourceBundle);
     }
 }

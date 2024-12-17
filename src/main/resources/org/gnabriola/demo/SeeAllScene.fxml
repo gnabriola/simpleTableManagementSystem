@@ -19,10 +19,5 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="refreshButton" layoutX="256.0" layoutY="336.0" mnemonicParsing="false" onAction="#refresh" text="Refresh">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>
