@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gnabriola.demo.MainController">
+   <children>
+      <Button fx:id="addButton" alignment="CENTER" layoutX="228.0" layoutY="47.0" mnemonicParsing="false" onAction="#switchToAddScene" text="Add members">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="editButton" layoutX="229.0" layoutY="115.0" mnemonicParsing="false" onAction="#switchToEditScene" text="Edit members">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="seeButton" layoutX="218.0" layoutY="182.0" mnemonicParsing="false" onAction="#switchToSeeAllScene" text="See all members">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="218.0" layoutY="250.0" mnemonicParsing="false" onAction="#switchToDeleteScene" text="Delete members">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
