@@ -36,5 +36,10 @@
             <Font size="18.0" />
          </font>
       </Button>
+      <Label fx:id="messageBoxLabel" alignment="CENTER" layoutX="144.0" layoutY="252.0" prefHeight="31.0" prefWidth="312.0" text="Message Box">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

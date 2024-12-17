@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 import java.sql.SQLException;
 
@@ -22,6 +23,8 @@ public class AddSceneController {
     private Button backButton, saveButton;
     @FXML
     private TextField idTextField, nameTextField, gradesTextField;
+    @FXML
+    private Label messageBoxLabel;
 
     String id, name, grades;
 
@@ -39,6 +42,7 @@ public class AddSceneController {
         grades = gradesTextField.getText();
         SQLController sqlController = new SQLController();
         sqlController.save(id, name, grades);
+        messageBoxLabel.setText("Added new member");
     }
 
 }
